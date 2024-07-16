@@ -1,0 +1,524 @@
+/* estilizações no escopo mais genérico da página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: color-mix(in oklch, currentColor 35%, transparent) transparent;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
+/* suaviza a rolagem da página ao usar o recurso de ancoragem (links para navegação na própria página) */
+html {
+  scroll-behavior: smooth;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Vazirmatn, Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  height: 100vh;
+}
+
+/* menu vertical superior, fixado no top */
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 99999;
+}
+
+/* largura do elemento que contém a foto e nome */
+.avatar-rounded-link {
+  width: 15%;
+}
+
+/* ajusta os itens no centro com layout flexível em linha */
+.avatar-rounded {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* formata o texto contido em 'span' dentro do 'pai' '.avatar-rounded' */
+.avatar-rounded span {
+  text-decoration: none;
+  font-size: small;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* configura a imagem como um círculo */
+.avatar-img img {
+  border-radius: 50%;
+}
+
+/* remove a formatação padrão de um 'list' e ajusta os componentes filhos em um layout flexível, alinhando o conteúdo ao centro */
+.nav-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+/* define margem para melhor exibição dos itens da lista */
+.nav-item li {
+  margin: 0 10px;
+}
+
+/* define a margem esquerda como automática, fazendo com que o último elemento seja "empurrado" para a direita */
+.nav-item li:last-child {
+  margin-left: auto;
+}
+
+/* remove o sublinhado dos links filhos do elemento que implementa essa classe */
+.nav-item li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* aplica uma cor de fundo diferente ao passar o mouse sobre os elementos de link (<a>), desse escopo */
+.nav-item li a:hover {
+  background-color: #fbfbfb3e;
+}
+
+/* estruturação do conteúdo inicial */
+#initial-content {
+  width: 100%;
+  height: 60%;
+  background-color: #ece8e8;
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+
+
+/* Estilos para o dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* estiliza a div 'retrátil' do menu, iniciando sem visualização, pois só deve aparecer, quando o mouse estiver sobre o botão 'portfólio' */
+.dropdown-content {
+  top: 1.45rem;
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  background-color: #000;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: .5rem 0;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+/* exibe o elemento configurado acima 'sem visualização' */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* remove o sublinhado dos elementos de link (<a>) desse escopo */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* dispõe o conteúdo alinhado ao centro vertical/horizontal do elemento que implementa essa classe */
+.work-id-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* estilização do texto de saudação */
+.text-information {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* títulos */
+.title {
+  margin-bottom: 3rem;
+}
+
+/* descrição de saudação */
+.information {
+  text-align: justify;
+}
+
+/* elemento pai do botão oval 'Ver mais'- fixado no fundo*/
+.button-container {
+  position: absolute;
+  bottom: 0;
+}
+
+/* estilização do botão 'Ver mais' */
+.my-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -5rem;
+  padding: 5px 15px;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  font-size: 16px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+/* efeito ao passar o mouse sobre o botão oval */
+.my-button:hover {
+  transform: scale(1.1);
+  background-color: #4CAF50;
+}
+
+.div-arrow :hover {
+  transform: scale(1.1);
+}
+
+.text-arrow-down {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/* Conteúdo da seção "Sobre" */
+
+.about-content {
+  width: 100%;
+  height: auto;
+  padding: 1rem 3rem;
+  background-color: #efefef;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 2rem;
+  gap: .5rem;
+}
+
+.card-body :where(p) {
+  flex-grow: 1;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card figure img {
+  min-width: 400px;
+  min-height: 250px;
+}
+
+.card :where(figure:first-child) {
+  overflow: hidden;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-end-start-radius: unset;
+  border-end-end-radius: unset;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.rem-24 {
+  width: 24rem;
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  --tw-shadow-colored: 0 20px 25px -5px, 0 8px 10px -6px;
+  box-shadow: 0 0 #0000, 0 0 #0000, var(--tw-shadow);
+}
+
+
+/* Fim - Conteúdo da seção "Sobre" */
+
+
+/* Conteúdo da seção "Graduação" */
+
+.graduation-content {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  padding: 0 3rem;
+}
+
+.graduation-content div p {
+  font-size: larger;
+}
+
+.graduation-text-content {
+  width: 50%;
+  margin: 0 4rem;
+}
+
+/* Fim - Conteúdo da seção "Graduação" */
+
+
+
+
+/* Conteúdo da seção "Portfólio" */
+
+.portfolio-content {
+  width: 90%;
+  height: 100%;
+  padding: 1rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-projects {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.inntech {
+  color: #FCE3A2;
+}
+
+.portfolio-description {
+  padding: 1rem;
+  width: 70%;
+}
+
+.portfolio-child {
+  background-color: #f3f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 1rem;
+}
+
+.portfolio-child a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.github-project {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 12rem;
+  padding: 1rem 0;
+  background-color: #6f6f6f;
+  border-radius: 1rem;
+  box-shadow: .2rem .2rem 1.2rem #1f3636c0;
+}
+
+.github-project:hover {
+  box-shadow: .4rem .4rem 2rem #1f3636;
+}
+
+
+.inntech-production {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 12rem;
+  padding: 1rem 0;
+  background-color: #456BA7;
+  border-radius: 1rem;
+  box-shadow: .2rem .2rem 1.2rem #456ba784;
+  color: #FCE3A2 !important;
+}
+
+.inntech-production:hover {
+  box-shadow: .4rem .4rem 2rem #456ba7d3;
+}
+
+/* Fim - Conteúdo da seção "Portfólio" */
+
+
+
+/* Conteúdo da seção "Contato" */
+
+.contact-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.input-group {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.contact-submit {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.contact-submit:hover {
+  background-color: #45a049;
+}
+
+/* Fim - Conteúdo da seção "Contato" */
+
+
+
+
+/* Úteis */
+
+.presentation {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.font-default {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small !important;
+}
+
+.nunito {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+.nunito-mid {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: medium !important;
+}
+
+.nunito-large {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: large !important;
+}
+
+.nunito-x-large {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: x-large !important;
+}
+
+.nunito-xx-large {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: xx-large !important;
+}
+
+.ml-05 {
+  margin-left: .5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+
+.section-spacing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rem;
+  padding-top: 4.5rem;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  font-size: xx-large;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-justify {
+  text-align: justify;
+}

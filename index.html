@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+
+  <!-- vincula o arquivo de estilização do website -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+
+    <!-- menu de navegação -->
+    <nav class="nav-header">
+      <!-- botão de âncora para o início '#' -->
+      <a href="#initial-content" class="avatar-rounded-link">
+        <div tabindex="0" role="button" class="avatar-rounded font-default upper">
+          <div class="avatar-img">
+            <img alt="Meu avatar" src="./resources/images/perfil.jpg" width="45" height="45" />
+          </div>
+          <span>Gilberto Júnior</span>
+        </div>
+      </a>
+
+      <!-- lista não ordenada dos botões do menu vertical superior -->
+      <ul class="nav-item font-default upper">
+        <li>
+          <a href="#about">Sobre mim</a>
+        </li>
+        <li>
+          <a href="#graduation">Formação</a>
+        </li>
+        <li class="dropdown">
+          <a href="#portfolio">Portfólio</a>
+          <ul class="dropdown-content">
+            <li><a href="https://github.com/GilbeJunior/inntec-services" target="_blank">Projeto no Github</a></li>
+            <li><a href="https://inntech.com.au/" target="_blank">Website em produção</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#contact">Contato</a>
+        </li>
+        <li>
+          <a href="https://github.com/GilbeJunior" target="_blank">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- primeira seção do corpo da página, para o conteúdo inicial -->
+  <section id="initial-content">
+    <div class="work-id-content">
+      <article class="text-information">
+        <div class="nunito upper presentation title">
+          hey, eu sou o Gilberto Júnior...
+        </div>
+
+        <div class="nunito upper">
+          <span class="information">
+            <p>Seja bem-vindo ao meu Site!</p>
+            Desenvolvi utilizando as stacks HTML, CSS e JAVASCRIPT,
+            aplicando os conhecimentos adquiridos na disciplina
+            <span style="color: #FDB313; font-weight: 700;">Ferramentas de Desenvolvimento Web</span>, na Universidade
+            <span style="color: #4270A1; font-size: larger; font-weight: 700;">Uninter</span>!
+          </span>
+        </div>
+      </article>
+
+      <div class="button-container">
+        <button class="my-button" onclick="window.location.href = '#about';">
+          <span class="text-arrow-down nunito flexbox">Ver mais</span>
+          <span class="arrow-down">
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/60/ffffff/expand-arrow--v1.png"
+              alt="expand-arrow--v1" />
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- seção para estruturação do conteúdo "Sobre" usando link interno (âncora) -->
+  <section id="about" class="section-spacing">
+    <span class="section-title upper">Sobre mim</span>
+    <article class="about-content">
+      <div class="card bg-base-100 rem-24 shadow-xl">
+        <figure>
+          <img src="./resources/images/sobremim.png" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <span class="card-title">Um pouco sobre mim...</span>
+          <p>Meu nome é Gilberto Júnior, tenho 25 anos, tenho uma linda e maravilhosa esposa e uma filha incrível que me
+            amam muito!</p>
+          <p>Sou desenvolvedor C# na empresa Insoft4 e gosto muito de tecnologia, desde Hardware até Software!</p>
+          <div class="card-actions end">
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 rem-24 shadow-xl">
+        <figure>
+          <img src="./resources/images/arte.jpg" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <span class="card-title">Arte e entretenimento!</span>
+          <p>Quando estou em casa, com bastante tempo livre, gosto muito de tocar violão e cantar.</p>
+          <p>Também gosto de assistir filmes novo mais muito mais, maratonar os mesmos filmes que assisti e gostei
+            muito.</p>
+          <div class="card-actions end">
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 rem-24 shadow-xl">
+        <figure>
+          <img src="./resources/images/hobby.jpg" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <span class="card-title">Hobbies!</span>
+          <p>No contexto de tecnologia, gosto de aprender mais sobre desenvolvimento de aplicações com as stacks ReactJS
+            e Node.js</p>
+          <div class="card-actions end">
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </section>
+
+
+  <!-- seção para estruturação do conteúdo "Formação" usando link interno (âncora) -->
+  <section id="graduation" class="section-spacing">
+    <span class="section-title upper">Formação</span>
+    <article class="graduation-content text-justify">
+      <div class="graduation-text-content">
+        <span class="upper bold">Formação Técnica</span>
+        <div>
+          <p>Em 2017 concluí o curso Técnico em Informática pela QI Cursos e Faculdades</p>
+          <p>Atualmente estou cursando Análise e desenvolvimento de Sistemas pela Universidade Uninter</p>
+          <p>Em um futuro próximo, após a conclusão da graduação atual, desejo realizar uma pós-graduação na mesma
+            universidade atual</p>
+        </div>
+      </div>
+
+      <div class="graduation-text-content">
+        <span class="upper bold">Idiomas</span>
+        <div>
+          <ul>
+            <li>Inglês: Intermediário</li>
+            <li>Espanhol: Básico</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- seção para estruturação do conteúdo "Portfólio" usando link interno (âncora) -->
+  <section id="portfolio" class="section-spacing">
+    <span class="section-title upper">Portfólio</span>
+    <article class="portfolio-content">
+      <div>
+        <span class="nunito-large upper">Website comercial</span>
+        <span class="inntech nunito-xx-large ml-05">Inntech</span>
+      </div>
+      <div class="portfolio-description">
+        <span>O Website da empresa Inntech foi desenvolvido por mim, utilizando as stacks ReactJS com template
+          Typescript, e a engine do DaisyUI/TailwindCSS para auxiliar nas estilizações. Resolvi utilizar como portfólio
+          (temporariamente, pois é privado) pois gostei bastante e é meu primeiro Website que está rodando em Produção,
+          podendo ser acessado através do link abaixo</span>
+      </div>
+      <div class="portfolio-projects">
+        <div class="portfolio-child">
+          <a href="https://github.com/GilbeJunior/inntec-services" target="_blank" class="github-project">
+            <img width="24" height="24" src="https://img.icons8.com/fluency/24/github.png" alt="github" />
+            <span>Projeto no Github</span>
+          </a>
+        </div>
+
+        <div class="portfolio-child">
+          <a href="https://inntech.com.au/" target="_blank" class="inntech-production">
+            <img width="16" height="16" src="./resources/images/inntech-logo.png" alt="inntech" />
+            <span>Inntech - Produção</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- seção para estruturação do conteúdo "Contato" usando link interno (âncora) -->
+  <section id="contact" class="section-spacing">
+    <article class="contact-content">
+      <form action="#">
+        <span class="section-title upper">Contato</span>
+        <div class="input-group">
+          <label for="nome" class="nunito-large">Nome</label>
+          <input type="text" id="nome" class="nunito-mid" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        <div class="input-group">
+          <label for="email" class="nunito-large">Email</label>
+          <input type="email" id="email" class="nunito-mid" name="email" placeholder="Digite seu melhor e-mail"
+            required>
+        </div>
+        <div class="input-group">
+          <label for="mensagem" class="nunito-large">Mensagem</label>
+          <textarea id="mensagem" class="nunito-mid" name="mensagem" rows="5" placeholder="Envie-me uma mensagem"
+            required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Enviar Mensagem</button>
+      </form>
+    </article>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
